@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  
+    <h2>Upload new article</h2>
+    <div class="row" style="width:100%;">
+      <table>
+        <tr>
+        <td>S.N.</td>
+        <td>Name</td>
+        <td>Description</td>
+        <td>Image</td>
+        <td>PDF</td>
+        <tr>
+        <% article_list.forEach(function(article,i){ %>
+          <tr>
+            <td><%= i %></td>
+            <td><%= article.name %></td>
+            <td><%= article.description %></td>
+            <td><img src="/uploads/<%= article.imagePath %>" width="150px"></td>
+            <td><%= article.pdf %></td>
+          </tr>
+        <% }) %>
+      </table>
+    </div>
+  </body>
+</html>

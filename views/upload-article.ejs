@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <h2>Upload new article</h2>
+    <form action="/article-post" enctype="multipart/form-data" method="POST">
+      <input type="text" name="name" placeholder="Name of article">
+      <input type="text" name="description" placeholder="Description">
+      <input type="file" name="imagePath" id="imagePath">
+      <input type="file" name="pdf" id="pdf">
+      <input type="submit" value="Upload Article" name="submit">
+    </form>
+  </body>
+</html>
